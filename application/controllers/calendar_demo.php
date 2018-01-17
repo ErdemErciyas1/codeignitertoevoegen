@@ -16,6 +16,7 @@ class Calendar_demo extends CI_Controller
 	
 	//de calendar object wordt geladen 
 	$this->load->view('show_calendar');
+	
 
 	
 

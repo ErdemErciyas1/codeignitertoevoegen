@@ -13,11 +13,13 @@ public function index()
 {	
 	//de calendar wordt geladen 
 	$this->load->view('edit_namen');
+	//
+
 	$this->load->model('HomeModel');
 		$data['records'] = $this->HomeModel->getData();
-
-		$this->load->view('HomeView' ,$data);
-
+		//de datababase namen worden zichtbaar gesteld in de view.
+		//$this->load->view('HomeView' ,$data);
+		//
 }
 
 
