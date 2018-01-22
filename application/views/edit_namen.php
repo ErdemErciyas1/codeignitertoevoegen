@@ -17,22 +17,22 @@
 		<table>
 		<tr>
 		<td>FirstName :</td>
-		<td><input type="text" name="person"></td>
+		<td><input type="text" name="person" required=""></td>
 		</tr>
 		<tr>
 		<td>Day :</td>
-		<td><input type="text" name="day"></td>
+		<td><input type="text" name="day" required=""></td>
 		</tr>
 		<tr>
 		<td>Month :</td>
-		<td><input type="text" name="month"></td>
+		<td><input type="text" name="month" required=""></td>
 		</tr> 
 		
 		</td>
 		</tr>
 		<tr>
 		<td>Year :</td>
-		<td><input type="text" name="year"></td>
+		<td><input type="text" name="year" required=""></td>
 		</tr>
 		</table>
 		<input type="submit"  class="add" name="add" value="Add">

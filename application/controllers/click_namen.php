@@ -14,4 +14,5 @@ function index(){
 
 	$this->load->view('clicknamen');
 }
+
 }

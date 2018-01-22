@@ -38,10 +38,10 @@ public function add_user()
 
 		//
 		
-		$this->load->model('Add_users');
+		$this->load->model('HomeModel');
 		
 		//als je de firstname en lastname invult zijn de gegevens opgeslagen in de database.
-		if($this->Add_users->add($data))
+		if($this->HomeModel->add($data))
 		{
 
 			echo "Data Insert Successfully";
@@ -51,6 +51,7 @@ public function add_user()
 			echo "Data Not Inserted";
 		}
 		
+		redirect('calendar_demo');
 	}
 
 

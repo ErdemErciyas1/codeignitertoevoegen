@@ -15,8 +15,11 @@ class Calendar_demo extends CI_Controller
 	//
 	
 	//de calendar object wordt geladen 
-	$this->load->view('show_calendar');
-	
+	$this->load->model('HomeModel');
+	$data['birthdays'] = $this->HomeModel->get_birthdays();
+	$this->load->view('show_calendar', $data);
+
+		
 
 	
 
