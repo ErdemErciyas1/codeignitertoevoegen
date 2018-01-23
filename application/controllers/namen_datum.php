@@ -55,7 +55,18 @@ public function add_user()
 	}
 
 
+public function delete(){
 
+	$this->load->model('HomeModel');
+
+	$id = $this->input->get('id');
+
+	if($this->HomeModel->deleteuser($id))
+	{
+		$data['birthdays'] = $this->HomeModel->get_birthdays();
+		$this->load->view('show_calendar',$data);
+	}
+}
       
 
 }

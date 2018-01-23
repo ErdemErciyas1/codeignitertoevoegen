@@ -16,6 +16,8 @@ foreach($birthdays as $_key => $_value) {?>
  <h2><ul><?=$month[$_value->month -1]?></ul></h2>
  <h1><ul><?=$_value->day?></ul></h1>
  <a><?=$_value->person?></a>
+
+ <td><a href="<?php echo site_url('namen_datum/delete/?id=' . $_value->id); ?>">Delete</a></td>
  
 
  <?php }  ?>
@@ -26,8 +28,6 @@ foreach($birthdays as $_key => $_value) {?>
 
 
                 <p><a href="<?php echo site_url('namen_datum');?>" id="namen">+ Toevoegen</a></p>
-
-
 
 
 </body>

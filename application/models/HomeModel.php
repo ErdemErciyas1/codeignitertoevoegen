@@ -31,4 +31,13 @@ public function get_birthdays(){
 			
 }
 
+
+function deleteuser($id)
+{
+	$this->load->database();
+	$this->db->where('id',$id);
+	$this->db->delete('birthdays');
+	return true;
+}
+
 }
