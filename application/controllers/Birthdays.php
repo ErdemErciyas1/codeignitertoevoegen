@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Calendar_demo extends CI_Controller
+class Birthdays extends CI_Controller
 {
 	public function __construct()
 {
@@ -30,13 +30,14 @@ class Calendar_demo extends CI_Controller
 
 
 	}
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
 
 
 

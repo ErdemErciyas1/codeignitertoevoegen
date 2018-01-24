@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class namen_datum extends CI_Controller
+class create extends CI_Controller
 {
 	public function __construct()
 {
@@ -51,10 +51,10 @@ public function add_user()
 			echo "Data Not Inserted";
 		}
 		
-		redirect('calendar_demo');
+		redirect('Birthdays');
 	}
 
-
+// de function 
 public function delete(){
 
 	$this->load->model('HomeModel');
@@ -66,7 +66,9 @@ public function delete(){
 		$data['birthdays'] = $this->HomeModel->get_birthdays();
 		$this->load->view('show_calendar',$data);
 	}
-}
-      
+	redirect('Birthdays');
+
 
 }
+}
+

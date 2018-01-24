@@ -12,7 +12,7 @@
 	<center class="center">fill in your personal details</center>
 
 	<center>
-	<?php echo form_open('namen_datum/add_user'); ?>
+	<?php echo form_open('create/add_user'); ?>
 	
 		<table>
 		<tr>
