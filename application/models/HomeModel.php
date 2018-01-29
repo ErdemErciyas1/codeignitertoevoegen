@@ -31,6 +31,33 @@ public function get_birthdays(){
 			
 }
 
+public function updateuserbyid($data,$id)
+
+{
+
+	$this->load->database();
+	$this->db->where('id', $id);
+	$this->db->update('birthdays',$data);
+	return true;
+}
+
+
+function getuser(){
+
+	$this->load->database();
+	$data = $this->db->get('Birthdays');
+	return $data->result();
+}
+
+function getuserbyid($id){
+
+	$this->load->database();
+	$this->db->where('id', $id);
+	$data = $this->db->get('Birthdays');
+	return $data->result();
+}
+
+
 
 function deleteuser($id)
 {
@@ -39,5 +66,6 @@ function deleteuser($id)
 	$this->db->delete('birthdays');
 	return true;
 }
+
 
 }

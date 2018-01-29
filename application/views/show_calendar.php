@@ -14,8 +14,8 @@
 $month = array("januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december");
 foreach($birthdays as $_key => $_value) {?>
  <a><?=$_value->person?></a>
- <td><a href="<?php echo site_url('create/delete/?id=' . $_value->id); ?>" class="buttonkleur">Delete</a></td>
-  <td><a href="<?php echo site_url('create/edit/?id=' . $_value->id); ?>" class="buttonkleur">Edit</a></td>
+ <td><a href="<?php echo site_url('Birthdays/delete/?id=' . $_value->id); ?>" class="buttonkleur">Delete</a></td>
+  <td><a href="<?php echo site_url('Birthdays/edit/?id=' . $_value->id); ?>" class="buttonkleur">Edit</a></td>
 
  <h2><ul><?=$month[$_value->month -1]?></ul></h2>
  <h1><ul><?=$_value->day?></ul></h1>
@@ -31,7 +31,7 @@ foreach($birthdays as $_key => $_value) {?>
 
 
 
-                <p><a href="<?php echo site_url('create');?>" id="namen">+ Toevoegen</a></p>
+                <p><a href="<?php echo site_url('Birthdays/Create');?>" id="namen">+ Toevoegen</a></p>
 
 
 </body>
