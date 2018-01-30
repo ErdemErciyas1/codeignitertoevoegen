@@ -3,7 +3,7 @@
 //model is verbonden met de database calendar, birthdays op phpmyadmin.
 class HomeModel extends CI_Model {
 
-  
+  // de codes hieronder horen bij de create!
   public function getData() {
     $query = $this->db->get('birthdays');
     return $query->result();
@@ -18,7 +18,7 @@ public function get_birthdays(){
   		public function add($data)
 		{
 			$this->load->database();
-			//de code hieronder laadt de database ''user''
+			
 			$count = $this->db->insert('birthdays', $data);
 			if($count>0)
 			{
@@ -28,7 +28,7 @@ public function get_birthdays(){
 			{
 				return false; 
 			}
-			
+			//
 }
 
 public function updateuserbyid($data,$id)
@@ -45,7 +45,7 @@ public function updateuserbyid($data,$id)
 function getuser(){
 
 	$this->load->database();
-	$data = $this->db->get('Birthdays');
+	$data = $this->db->get('birthdays');
 	return $data->result();
 }
 
@@ -53,7 +53,7 @@ function getuserbyid($id){
 
 	$this->load->database();
 	$this->db->where('id', $id);
-	$data = $this->db->get('Birthdays');
+	$data = $this->db->get('birthdays');
 	return $data->result();
 }
 

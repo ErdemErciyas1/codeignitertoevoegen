@@ -3,20 +3,20 @@
 <head>
 
 	<title>Add Character</title>
-<link rel="stylesheet" href="<?php echo base_url('include/editnames.css')?>"?>	
+<link rel="stylesheet" href="<?php echo base_url('include/style.css')?>"?>	
 </head>
 <body>
 
 
-<?php  
-if (isset($data))
+<?php
+if(isset($data))
 {
 	?>
 
-	<div id="flexcontainer">
+<div id="flexcontainer">
 	<h1 class=>Welkom </h1>
 
-	<center class="center">Update User</center>
+	<center class="center">Update user</center>
 
 	<center>
 
@@ -25,39 +25,39 @@ if (isset($data))
 		<table>
 		<tr>
 		<td>FirstName :</td>
-		<td><input type="hidden" name="eid" required="" value="<?php echo $data->eid;?>" ></td>
-		<td><input type="text" name="person" required="" value="<?php echo $data->person;?>" ></td>
+		<td><input type="hidden" name="eid" required="" value="<?php echo $data->id;?>" ></td>
+		<td><input type="text" name="person" required="" value="<?php echo $data->eerstenaam;?>" ></td>
 		</tr>
 		<tr>
 		<td>Day :</td>
-		<td><input type="text" name="day" required="" value="<?php echo $data->day;?>"></td>
+		<td><input type="text" name="dagen" required="" value="<?php echo $data->dagen;?>"></td>
 		</tr>
 		<tr>
 		<td>Month :</td>
-		<td><input type="text" name="month" required="" value="<?php echo $data->month;?>"></td>
+		<td><input type="text" name="maanden" required="" value="<?php echo $data->maanden;?>"></td>
 		</tr> 
 		
 		</td>
 		</tr>
 		<tr>
 		<td>Year :</td>
-		<td><input type="text" name="year" required="" value="<?php echo $data->year;?>"></td>
+		<td><input type="text" name="jaren" required="" value="<?php echo $data->jaren;?>"></td>
 		</tr>
 		</table>
-		<input type="submit"  class="add" name="add" value="Add">
+		<input type="submit"  class="add" name="Edit" value="Edit">
 	</center>
 
 </div>
-
 	<?php
 }
 else
 {
+
 	?>
 	<div id="flexcontainer">
 	<h1 class=>Welkom </h1>
 
-	<center class="center">fill in your personal details</center>
+	<center class="center">Create user</center>
 
 	<center>
 
@@ -89,9 +89,11 @@ else
 
 </div>
 	<?php
-}
 
-?>
+}
+ ?>
+
+	
 
 
 

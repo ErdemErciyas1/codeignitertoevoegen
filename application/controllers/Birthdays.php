@@ -106,39 +106,36 @@ public function get_user(){
 }
 
 
-public function Edit(){
-	$this->load->view('add_namen');
-	$this->load->model('HomeModel');		
+public function Edit(){		
 $id = $this->input->get('id');
-$data['Birthdays'] = $this->HomeModel->getuserbyid($id);
-	
+$this->load->model('HomeModel');
+$data['person'] = $this->HomeModel->getuserbyid($id);
+$this->load->view('add_namen',$data);
+
+
 
 
 }
 
 
 public function updateuser(){
-	$firstname = $this->input->post('person');
-	$lastname = $this->input->post('day');
-	$date = $this->input->post('month');
-	$year = $this->input->post('year');
+	$firstname = $this->input->post('eerstenaam');
+	$lastname = $this->input->post('dagen');
+	$date = $this->input->post('maanden');
+	$year = $this->input->post('jaren');
 	$id = $this->input->post('eid');
-	$data = array('person'=>$firstname ,'day'=>$lastname ,'month'=>$date ,'year'=>$year,'eid'=>$id);
-
-
-
+	
+	$data = array('eerstenaam'=>$firstname ,'dagen'=>$lastname ,'maanden'=>$date ,'jaren'=>$year);
 
 
 	 
 	$this->load->model('HomeModel');
-	if($this->HomeModel->updateuserbyid($data, $id))
+	if($this->HomeModel->updateuserbyid($data,$id))
 	{
-
 		$data['birthdays'] = $this->HomeModel->getuser();
 	$this->load->view('show_calendar', $data);
-
+	}
 	} 
-}
 
 }
 
