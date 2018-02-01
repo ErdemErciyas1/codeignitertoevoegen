@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Calendar</title>
+
 <link rel="stylesheet" href="<?php echo base_url('include/style.css')?>"/>
 
 </head>
@@ -15,7 +16,8 @@ $month = array("januari","februari","maart","april","mei","juni","juli","augustu
 foreach($birthdays as $_key => $_value) {?>
  <a><?=$_value->person?></a>
 
- <td><a href="<?php echo site_url('Birthdays/Edit');?>" id="namen">Edit</a><td>
+
+ <td><a href="<?php echo site_url('Birthdays/Edit/' . $_value->id);?>" id="namen">Edit</a><td>
 
  <td><a href="<?php echo site_url('Birthdays/delete/?id=' . $_value->id); ?>" class="buttonkleur">Delete</a></td>
 
