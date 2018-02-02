@@ -134,7 +134,7 @@ public function updateuser(){
 	$lastname = $this->input->post('day');
 	$date = $this->input->post('month');
 	$year = $this->input->post('year');
-	
+	$id= $this->input->post('eid');
 	$data = array('person'=>$firstname ,'day'=>$lastname ,'month'=>$date ,'year'=>$year);
 
 
@@ -144,7 +144,7 @@ public function updateuser(){
 	{
 		$data['birthdays'] = $this->HomeModel->getuser();
 	$this->load->view('show_calendar', $data);
-	redirect('Birthdays');
+	
 	}
 	} 
 

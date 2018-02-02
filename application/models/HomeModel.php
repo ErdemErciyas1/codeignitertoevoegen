@@ -38,7 +38,6 @@ public function get_birthdays(){
 			}
 			//
 }
-//bezig met edit
 public function updateuserbyid($data,$id)
 
 {
@@ -46,21 +45,24 @@ public function updateuserbyid($data,$id)
 	$this->load->database();
 	$this->db->where('id', $id);
 	$this->db->update('birthdays',$data);
+	$this->db->order_by('month','ASC');
 	return true;
 }
 
-//bezig met edit
+//de edit is afgerond
 function getuser(){
 
 	$this->load->database();
 	$data = $this->db->get('birthdays');
 	return $data->result();
+	$this->db->order_by('month','ASC');
 }
-//bezig met edit
+//de edit is afgerond
 
 function getuserbyid($id){
 
 	$this->load->database();
+	$this->db->order_by('month','ASC');
 
 	$this->db->where('id', $id);
 	$data = $this->db->get('birthdays');	

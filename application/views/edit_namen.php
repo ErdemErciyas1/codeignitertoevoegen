@@ -19,9 +19,13 @@
 
 			<?php var_dump($person); ?>
 		<table>
+		<td><input type="text" name="eid" required="" style="display:none" value="<?php echo $person->id; ?>"  ></td>
 		<tr>
 		<td>FirstName :</td>
+
+
 		<td><input type="text" name="person" required="" value="<?php echo $person->person; ?>"  ></td>
+
 		</tr>
 		<tr>
 		<td>Day :</td>
